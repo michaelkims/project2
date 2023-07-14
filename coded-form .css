@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+}
+/* Body------------------ */
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(-135deg,#71b7e6,#9b59b6); */
+    background: rgb(250, 248, 248);
+    padding: 10px;
+}
+/* containerDiv--------------- */
+.container{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,#72b4e7,#9b59b6);
+    background: #000;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+
+}
+.Title i h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-135deg,#0f314b,#473c4b);
+    /* color: #f4f4f4; */
+    font-size: 1.4rem;
+    -webkit-text-stroke:1px dodgerblue;
+    color: transparent;
+
+
+
+
+}
+/* container-title---------------- */
+.container.title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container.title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    
+}
+/* container form */
+.container form .User-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+/* user-details .input-box------------- */
+form .User-details .input-box{
+    width: calc(100 / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+/* user-details input-box .details */
+.User-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.User-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width:2px;
+    transition: all 0.3s ease;
+}
+
+.User-details .input-box input:focus
+.User-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+/* gender-details .gender-title */
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+/* form category */
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 14px 0px;
+}
+
+/* gender-details category label ---------------*/
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+
+}
+
+/* gender-details categoty dot------------- */
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background:#d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+/* dot-1:checked .category label .one----------- */
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+form input[type="radio"]{
+    display: none;
+}
+/* button--------------------- */
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+form .button button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(-135deg,#71b7e6,#9b59b6);
+
+}
+form .button button:hover{
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    
+}
+
+/* responsiveness---------------- */
+@media (max-width:584px) {
+    body{
+        background: linear-gradient(135deg,#71b7e6,#9b59b6);
+    }
+
+    .container{
+        max-width: 100%3;
+        background: #000;
+        color: #f4f4f4;
+    }
+
+    form .User-details .input-box{
+        width:100%;
+        margin-bottom: 15px;
+    }
+
+    form .gender-details .category{
+        width: 100%;
+    }
+    
+    .container form .User-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .Title i h2{
+        flex-wrap: wrap;
+        -webkit-line-clamp: 2;
+        font-size: 1.0rem;
+        color: #f4f4f4;
+    }
+}
